@@ -36,6 +36,7 @@
 <body>
     <!-- 모바일 메뉴 -->
     <div class="m-menu-bg"></div>
+
     <div class="m-menu-wrap">
         <button class="m-bt-close">close</button>
         <ul class="m-sns-menu">
@@ -97,6 +98,18 @@
             </li>
         </ul>
     </div>
+
+    <!-- 상단이동 -->
+    <button class="gotop">top</button>
+
+    <!-- 오른쪽 고정메뉴 -->
+    <ul class="quick-menu">
+        <li><a href="#"><img src="images/quick01.png" alt=""></a></li>
+        <li><a href="#"><img src="images/quick02.png" alt=""></a></li>
+        <li><a href="#"><img src="images/quick03.png" alt=""></a></li>
+        <li><a href="#"><img src="images/quick04.png" alt=""></a></li>
+    </ul>
+
     <div class="wrap">
         <!-- 상단 -->
         <header class="header">
@@ -172,43 +185,195 @@
         <!-- 비주얼 -->
         <section class="visual">
             <div class="swiper-container sw-visual">
+                
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="visual-div visual-bg1"></div>
+                        <div class="visual-div visaul-bg-1"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="visual-div visual-bg2"></div>
+                        <div class="visual-div visaul-bg-2"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="visual-div visual-bg3"></div>
+                        <div class="visual-div visaul-bg-3"></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="visual-div visual-bg4"></div>
+                        <div class="visual-div visaul-bg-4"></div>
                     </div>
                 </div>
+
                 <button class="sw-visual-prev">prev</button>
                 <button class="sw-visual-next">next</button>
+
             </div>
         </section>
         <!-- 스토리 -->
         <section class="story">
-            <div class="container"></div>
+            <div class="container clearfix">
+                <div class="story-box story-box-1">
+                    <img src="images/mb01_img.png" alt="마시그래이">
+                    <a href="#">
+                        <h2>브랜드 스토리</h2>
+                        <p>
+                            마시그래이는 표준어로 '마셔라' 라는 <br>
+                            사투리의 표현을 가져온 것으로 브랜드네임에서부터 <br>
+                            고객에게 친밀하게 다가가고자 하는 마음을 담았습니다.
+                        </p>
+                    </a>
+                </div>
+                
+                <div class="story-box story-box-2">
+                    <div class="swiper-container sw-story">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="story-link-1">메뉴1</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="story-link-2">메뉴2</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="story-link-3">메뉴3</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="story-link-4">메뉴4</a>                                
+                            </div>
+                        </div>
+                        <button class="sw-story-prev">prev</button>
+                        <button class="sw-story-next">next</button>
+                    </div>
+                </div>
+
+                <div class="story-box story-box-3">
+                    <a href="#" class="story-link-bus-1">
+                        <h3>창업절차</h3>
+                        <p>
+                            체계적인 마시그래이의 <br>
+                            창업시스템에 대해 알아보세요.
+                        </p>
+                    </a>
+                    <a href="#" class="story-link-bus-2">
+                        <h3>창업문의</h3>
+                        <p>
+                            차별화된 Take-out 브랜드<br>
+                            마시그래이에 대해 알아보세요.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="story-box story-box-4">
+                    <div class="story-search story-search-img">
+
+                    </div>
+                    <div class="story-search story-search-cont">
+                       
+                        <h3>
+                            <strong>STORE</strong>
+                            <span>매장</span>
+                        </h3>
+                        <p>
+                            가까운 마시그래이 매장을 <br>
+                            찾아보세요
+                        </p>
+                        <form action="" class="search-form">
+                            <input type="text" class="search">
+                            <input type="image" src="images/btn_store.gif" class="search-bt">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- 상품안내 -->
         <section class="good">
-            <div class="container"></div>
+            <div class="container">
+                <h2>MASIGRAY <strong>MENU</strong></h2>
+                <p>마시그래이의 다양한 메뉴를 맛보세요</p>
+                <div class="swiper-container sw-good">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="good-img-1"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="good-img-2"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="good-img-3"></a>
+                        </div>
+                    </div>
+                    <button class="sw-good-prev">이전</button>
+                    <button class="sw-good-next">다음</button>
+
+                    <div class="swiper-pagination sw-good-pg"></div>
+                </div>
+            </div>
         </section>
         <!-- 프랜차이즈 -->
         <section class="franchiser">
-            <div class="container"></div>
+            <div class="container">
+                <h2>MASIGRAY <strong>Franchiser</strong></h2>
+                <p>마시그래이 신규 매장</p>
+                <div class="fr-wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/store01.jpg" alt="합천점">
+                                합천점
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/store01.jpg" alt="신천점">
+                                신천점
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/store01.jpg" alt="복현푸르지오">
+                                복현푸르지오
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/store01.jpg" alt="대곡역점">
+                                대곡역점
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <!-- sns -->
         <section class="sns">
-            <div class="container"></div>
+            <div class="container">
+                <h2>MASIGRAY <strong>SNS</strong></h2>
+                <p>#masigray</p>
+            </div>
         </section>
         <!-- 하단 -->
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">점주의 방</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">가맹문의</a></li>
+                        <li><a href="#">고객의 소리</a></li>
+                    </ul>
+                </div>
+                <div class="footer-logo">
+                    <a href="#"><img src="images/foot_logo.png" alt="마시그래이"></a>
+                </div>
+                <div class="footer-copy">
+                    (주) 에스이엠 | 사업자등록번호 : 502 - 86 - 32017 | 대표이사 : 정영주 <br>
+                    주소 : 대구광역시 수성구 만촌동 957-2번지 2층 | 전화 : 1899-2087 | 팩스 : 053-474-9522
+                </div>
+                <div class="footer-sns">
+                    <a href="#"><img src="images/foot_sns_blog.png" alt="블로그"></a>
+                    <a href="#"><img src="images/foot_sns_insta.png" alt="인스타그램"></a>
+                    <a href="#"><img src="images/foot_sns_facebook.png" alt="페이스북"></a>
+                </div>
+            </div>
         </footer>
     </div>
 

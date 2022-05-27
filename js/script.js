@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     // 주메뉴 모션 적용
     let nav = $('.nav');
     let headerMain = $('.header-main');
@@ -23,24 +24,25 @@ $(document).ready(function () {
             header.removeClass('fix-active')
         }
     });
+
     // 모바일 메뉴
     let mBt = $('.m-bt');
     let mMenuBg = $('.m-menu-bg');
     let mMenuWrap = $('.m-menu-wrap');
     let mBtClose = $('.m-bt-close');
-    mBt.click(function(){
-        mMenuWrap.addClass('m-menu-wrap-active');
-        mMenuBg.addClass('m-menu-bg-active');
 
+    mBt.click(function(){
+       mMenuWrap.addClass('m-menu-wrap-active');
+       mMenuBg.addClass('m-menu-bg-active');
     });
     mBtClose.click(function(){
         mMenuWrap.removeClass('m-menu-wrap-active');
         mMenuBg.removeClass('m-menu-bg-active');
     });
+
     mMenuBg.click(function(){
         mMenuWrap.removeClass('m-menu-wrap-active');
         mMenuBg.removeClass('m-menu-bg-active');
-        // event.stopPropagation();
     });
 
     // 화면 리사이징 처리
@@ -50,17 +52,56 @@ $(document).ready(function () {
             mMenuWrap.removeClass('m-menu-wrap-active');
             mMenuBg.removeClass('m-menu-bg-active');
         }
-    })
+    });
+
     
-    
-    
+
 });
+
 window.onload = function(){
-    let swVisual = new Swiper('.sw-visual', {
-        loop:true,
+    // visual slide
+    let swVisual = new Swiper('.sw-visual',{
+        loop: true,       
         navigation: {
-            prevEl: '.sw-visual-prev',
-            nextEl: '.sw-visual-next'
+            prevEl : '.sw-visual-prev',
+            nextEl : '.sw-visual-next'
         }
+    });
+    // story slide
+    let swStory = new Swiper('.sw-story',{
+        loop: true,   
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        }, 
+        speed: 1000,   
+        navigation: {
+            prevEl : '.sw-story-prev',
+            nextEl : '.sw-story-next'
+        }
+    });
+    // good slide
+    let swGood = new Swiper('.sw-good',{
+        loop: true,   
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        }, 
+        speed: 1000,   
+        navigation: {
+            prevEl : '.sw-good-prev',
+            nextEl : '.sw-good-next'
+        },
+        pagination: {
+            el: '.sw-good-pg',
+            clickable: true
+        }
+    });
+
+    // 상단이동 버튼
+    $('.gotop').click(function(){
+        $('html').animate({
+            scrollTop: 0
+        }, 500);
     });
 }
